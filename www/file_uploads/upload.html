@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+	<link rel="stylesheet" href="../index.css" media="all" />
+
+	<title>
+		Select and upload multiple
+		files to the server
+	</title>
+</head>
+
+<body>
+	<div class="notice box">
+		<h1 class="glitch">WEBSERV</h1>
+		  <ul>
+	<!-- multipart/form-data ensures that form
+	data is going to be encoded as MIME data -->
+	<form action="upload.php" method="POST"
+			enctype="multipart/form-data">
+
+		<h2>Upload Files</h2>
+
+		<p>
+			<h2>
+			Select files to upload:
+
+			<!-- name of the input fields are going to
+				be used in our php script-->
+				<input type="file" name="files[]" multiple>
+
+				<br><br>
+
+				<input type="submit" name="submit" value="Upload" >
+			</h2>
+		</p>
+	</form>
+	<h3><a href="../index.html">GO BACK</a></h3>
+	</ul>
+	<h2><span>WebServ</span> by tcarlena & sverkart & ametapod is currently running!</h2>
+	<h2>This is when you finally understand why a URL starts with HTTP</h2>
+  </div>
+
+</body>
+
+</html>
